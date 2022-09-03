@@ -1,0 +1,1 @@
+insert into parking(address) values('Perm'),('Moscow');

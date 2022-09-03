@@ -1,0 +1,16 @@
+server:
+  port: 8090
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cars
+    username: usercar
+    password: usercar
+#    initialization-mode: always
+  flyway:
+    enabled: true
+    baselineOnMigrate: true
+  jpa:
+    show-sql: true
+  properties:
+    hibernate:
+      format_sql: true

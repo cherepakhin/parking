@@ -5,6 +5,8 @@ import ru.perm.v.parking.db.CarEntity;
 import ru.perm.v.parking.repository.CarRepository;
 import ru.perm.v.parking.service.CarService;
 
+import java.util.List;
+
 @Service
 public class CarServiceImpl implements CarService {
     private final CarRepository carRepository;
@@ -20,5 +22,15 @@ public class CarServiceImpl implements CarService {
         carEntity.setMark(mark);
         carEntity = carRepository.save(carEntity);
         return carEntity;
+    }
+
+    @Override
+    public CarEntity getById(Long id) {
+        return carRepository.getOne(id);
+    }
+
+    @Override
+    public List<CarEntity> getAll() {
+        return carRepository.findAll();
     }
 }

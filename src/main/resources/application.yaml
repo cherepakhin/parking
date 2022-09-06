@@ -5,7 +5,7 @@ spring:
     url: jdbc:postgresql://localhost:5432/cars
     username: usercar
     password: usercar
-#    initialization-mode: always
+  #    initialization-mode: always
   flyway:
     enabled: true
     baselineOnMigrate: true

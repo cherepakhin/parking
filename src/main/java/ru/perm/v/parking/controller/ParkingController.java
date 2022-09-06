@@ -1,4 +1,4 @@
-package ru.perm.v.parking;
+package ru.perm.v.parking.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.web.bind.annotation.RequestMapping;

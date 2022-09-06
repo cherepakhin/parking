@@ -37,8 +37,7 @@ public class CarController {
 
     @GetMapping("/")
     public List<CarDto> getAll() {
-        List<CarEntity> cars=carService.getAll();
-        return cars.stream().map(carEntity -> new CarDto(carEntity.getId(),
+        return carService.getAll().stream().map(carEntity -> new CarDto(carEntity.getId(),
                 carEntity.getGosNumber(), carEntity.getMark())).collect(Collectors.toList());
     }
 

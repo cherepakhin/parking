@@ -7,6 +7,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/parking")
 public class ParkingController {
-
     ObjectMapper mapper = new ObjectMapper();
 }

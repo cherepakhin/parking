@@ -7,6 +7,7 @@ import lombok.experimental.FieldDefaults;
 @Setter
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 @ToString
 @EqualsAndHashCode
 @Accessors(chain = true)

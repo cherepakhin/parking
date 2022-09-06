@@ -2,7 +2,7 @@ server:
   port: 8090
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/cars
+    url: jdbc:postgresql://localhost:5432/parkingcar
     username: usercar
     password: usercar
   #    initialization-mode: always

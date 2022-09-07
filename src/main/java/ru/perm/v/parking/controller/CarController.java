@@ -1,6 +1,8 @@
 package ru.perm.v.parking.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.perm.v.parking.db.CarEntity;
 import ru.perm.v.parking.dto.CarDto;
@@ -30,9 +32,16 @@ public class CarController {
     }
 
     @GetMapping("/{id}")
-    public CarDto getCar(@PathVariable Long id) {
-        CarEntity carEntity=carService.getById(id);
-        return new CarDto(carEntity.getId(), carEntity.getGosNumber(), carEntity.getMark());
+    public ResponseEntity getCar(@PathVariable Long id) {
+        try {
+            CarEntity carEntity=carService.getById(id);
+            System.out.println(carEntity);
+            CarDto dto = new CarDto(carEntity.getId(), carEntity.getGosNumber(), carEntity.getMark());
+            return new ResponseEntity<>(dto,HttpStatus.OK);
+        } catch (Exception e) {
+            System.out.println(e);
+            return new ResponseEntity<>(e.getMessage(),HttpStatus.NOT_FOUND);
+        }
     }
 
     @GetMapping("/")

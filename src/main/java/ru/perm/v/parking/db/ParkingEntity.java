@@ -5,6 +5,7 @@ import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -16,7 +17,8 @@ import java.util.Set;
 @Accessors(chain = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Table(name = "parking")
-public class ParkingEntity {
+@Entity
+public class ParkingEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -26,4 +28,5 @@ public class ParkingEntity {
             joinColumns = @JoinColumn(name = "parking_id"),
             inverseJoinColumns = @JoinColumn(name = "car_id"))
     Set<CarEntity> cars = new HashSet<>();
+
 }

@@ -17,5 +17,9 @@ import java.util.List;
 public class ParkingDto {
     private Long id;
     private String address = "";
-    private List<CarDto> cars = new ArrayList<>();
+
+    public ParkingDto(Long id, String address) {
+        this.id = id;
+        this.address = address;
+    }
 }

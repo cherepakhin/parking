@@ -7,7 +7,7 @@
 Инициализация БД:
 ````shell
 create database parkingcar 
-mvn flyway:migrate -Dflyway.url=jdbc:postgresql://localhost:5432/parking_car -Dflyway.user=usercar -Dflyway.password=usercar
+mvn flyway:migrate -Dflyway.url=jdbc:postgresql://localhost:5432/parkingcar -Dflyway.user=usercar -Dflyway.password=usercar
 mvn spring-boot:run
 ````
 Очистка БД:

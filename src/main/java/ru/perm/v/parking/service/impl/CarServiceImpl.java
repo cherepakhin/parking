@@ -16,10 +16,10 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public CarEntity registration(String gosNumber, String mark) {
+    public CarEntity registration(String gosNumber, String model) {
         CarEntity carEntity = new CarEntity();
         carEntity.setGosNumber(gosNumber);
-        carEntity.setMark(mark);
+        carEntity.setModel(model);
         carEntity = carRepository.save(carEntity);
         return carEntity;
     }

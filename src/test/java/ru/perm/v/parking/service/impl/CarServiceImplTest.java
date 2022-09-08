@@ -17,11 +17,11 @@ class CarServiceImplTest {
         CarRepository carRepository = mock(CarRepository.class);
         CarService carService = new CarServiceImpl(carRepository);
         String gosNumber = "111";
-        String mark = "Lada-2109";
-        carService.registration(gosNumber, mark);
+        String model = "Lada-2109";
+        carService.registration(gosNumber, model);
         CarEntity savedCar = new CarEntity();
         savedCar.setGosNumber(gosNumber);
-        savedCar.setMark(mark);
+        savedCar.setModel(model);
         Mockito.verify(carRepository, times(1)).save(savedCar);
     }
 

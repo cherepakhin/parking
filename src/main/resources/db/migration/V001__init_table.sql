@@ -1,12 +1,12 @@
 CREATE TABLE if not exists parking (
-	"id"            int          not null UNIQUE,
+	"id"            serial          not null UNIQUE,
 	"address"         varchar(255)    not null default '-'
 );
 
 CREATE table if not exists car (
-	"id"            int          not null UNIQUE,
+	"id"            serial          not null UNIQUE,
 	"gos_number"       varchar(20)     not null default '-',
-	"mark"       varchar(20)     not null default '-'
+	"model"       varchar(20)     not null default '-'
 );
 
 CREATE table if not exists parking_car (

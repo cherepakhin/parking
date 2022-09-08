@@ -16,21 +16,21 @@ class CarControllerTest {
     @Test
     void newCar() {
         String gosNumber = "111";
-        String mark = "Lada-2109";
+        String model = "Lada-2109";
 
         CarEntity carEntity = new CarEntity();
         carEntity.setGosNumber(gosNumber);
-        carEntity.setMark(mark);
+        carEntity.setModel(model);
 
         CarController carController = new CarController(carService);
 
-        when(carService.registration(gosNumber, mark)).thenReturn(carEntity);
+        when(carService.registration(gosNumber, model)).thenReturn(carEntity);
 
-        CarDto actualCar = carController.newCar(gosNumber, mark);
+        CarDto actualCar = carController.newCar(gosNumber, model);
 
         CarDto expectedCar = new CarDto();
-        expectedCar.setNumber(gosNumber);
-        expectedCar.setMark(mark);
+        expectedCar.setGosNumber(gosNumber);
+        expectedCar.setModel(model);
 
         Assertions.assertEquals(expectedCar, actualCar);
     }

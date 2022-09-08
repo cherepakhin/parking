@@ -19,5 +19,6 @@ public class CarEntity {
     private Long id;
     @Column(name = "gos_number")
     private String gosNumber = "";
-    private String mark = "";
+    @Column(name = "model")
+    private String model = "";
 }

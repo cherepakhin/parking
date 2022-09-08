@@ -14,6 +14,6 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class CarDto {
     private Long id;
-    private String number = "";
-    private String mark = "";
+    private String gosNumber = "";
+    private String model = "";
 }

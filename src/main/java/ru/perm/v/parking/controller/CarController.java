@@ -28,7 +28,7 @@ public class CarController {
     @PostMapping("/")
     public CarDto newCar(@RequestParam("gosNumber") String gosNumber, @RequestParam("model") String model) {
         CarEntity carEntity = carService.registration(gosNumber, model);
-        return new CarDto(carEntity.getId(), carEntity.getGosNumber(), carEntity.getMark());
+        return new CarDto(carEntity.getId(), carEntity.getGosNumber(), carEntity.getModel());
     }
 
     @GetMapping("/{id}")
@@ -36,7 +36,7 @@ public class CarController {
         try {
             CarEntity carEntity=carService.getById(id);
             System.out.println(carEntity);
-            CarDto dto = new CarDto(carEntity.getId(), carEntity.getGosNumber(), carEntity.getMark());
+            CarDto dto = new CarDto(carEntity.getId(), carEntity.getGosNumber(), carEntity.getModel());
             return new ResponseEntity<>(dto,HttpStatus.OK);
         } catch (Exception e) {
             System.out.println(e);
@@ -47,7 +47,7 @@ public class CarController {
     @GetMapping("/")
     public List<CarDto> getAll() {
         return carService.getAll().stream().map(carEntity -> new CarDto(carEntity.getId(),
-                carEntity.getGosNumber(), carEntity.getMark())).collect(Collectors.toList());
+                carEntity.getGosNumber(), carEntity.getModel())).collect(Collectors.toList());
     }
 
 }

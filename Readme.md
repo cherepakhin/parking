@@ -12,6 +12,6 @@ mvn spring-boot:run
 ````
 Очистка БД:
 ````shell
-mvn flyway:clean -Dflyway.user=usercar -Dflyway.password=usercar -Dflyway.url=jdbc:postgresql://localhost:5432/parking_car
+mvn flyway:clean -Dflyway.user=usercar -Dflyway.password=usercar -Dflyway.url=jdbc:postgresql://localhost:5432/parkingcar
 ````
 

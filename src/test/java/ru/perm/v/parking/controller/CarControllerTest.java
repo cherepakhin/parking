@@ -6,7 +6,6 @@ import ru.perm.v.parking.db.CarEntity;
 import ru.perm.v.parking.dto.CarDto;
 import ru.perm.v.parking.service.CarService;
 
-import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 

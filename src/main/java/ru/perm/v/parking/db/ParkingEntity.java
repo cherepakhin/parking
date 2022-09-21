@@ -9,6 +9,9 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Парковка. Содержит список машин, ктр. сейчас припаркованы.
+ */
 @Setter
 @Getter
 @NoArgsConstructor

@@ -4,6 +4,10 @@ import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 
+/**
+ * DTO машины
+ *
+ */
 @Setter
 @Getter
 @NoArgsConstructor
@@ -14,6 +18,12 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class CarDto {
     private Long id;
+    /**
+     * Гос.номер
+     */
     private String gosNumber = "";
+    /**
+     * Модель (ВАЗ-.. и т.п.)
+     */
     private String model = "";
 }

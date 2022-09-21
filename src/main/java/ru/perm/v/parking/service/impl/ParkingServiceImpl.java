@@ -7,6 +7,7 @@ import ru.perm.v.parking.service.ParkingService;
 
 import java.util.List;
 
+//TODO: не реализовано добавление и удаление  парковки
 @Service
 public class ParkingServiceImpl implements ParkingService {
     private final ParkingRepository parkingRepository;

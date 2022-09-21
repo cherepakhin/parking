@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 /**
  * REST контроллер для добавления, удаления, изменения, получения машин
  */
+//TODO: не реализовано удаление машины
 @RestController
 @RequestMapping("/car")
 public class CarController {
@@ -39,7 +40,6 @@ public class CarController {
             CarDto dto = new CarDto(carEntity.getId(), carEntity.getGosNumber(), carEntity.getModel());
             return new ResponseEntity<>(dto,HttpStatus.OK);
         } catch (Exception e) {
-            System.out.println(e);
             return new ResponseEntity<>(e.getMessage(),HttpStatus.NOT_FOUND);
         }
     }

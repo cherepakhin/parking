@@ -5,6 +5,10 @@ import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 
+/**
+ * Машина.
+ * Аттрибуты: госномер, марка
+ */
 @Setter
 @Getter
 @NoArgsConstructor

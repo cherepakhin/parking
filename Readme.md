@@ -20,3 +20,9 @@ mvn flyway:clean -Dflyway.user=usercar -Dflyway.password=usercar -Dflyway.url=jd
 git remote add origin https://github.com/cherepakhin/parking.git
 git push -u origin master
 ````
+
+## НЕ СДЕЛАНО
+1. Похоже нет нормальных логов
+2. Интеграционное тестирование с помощью behave
+3. Нагрузочное тестирование с помощью yandex-tank
+4. Докеризация

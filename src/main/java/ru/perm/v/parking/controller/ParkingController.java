@@ -10,6 +10,10 @@ import ru.perm.v.parking.service.ParkingService;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * REST контроллер для парковок
+ */
+//TODO: Нет тестов
 @RestController
 @RequestMapping("/parking")
 public class ParkingController {
@@ -20,10 +24,15 @@ public class ParkingController {
         this.parkingService = parkingService;
     }
 
+    /**
+     * Получение всех припаркованных машин
+     * @return список машин
+     */
     @GetMapping("/")
     public List<ParkingDto> getAll() {
         return parkingService.getAll().stream()
                 .map(parkingEntity -> new ParkingDto(parkingEntity.getId(), parkingEntity.getAddress()))
                 .collect(Collectors.toList());
     }
+    //TODO: реализовать занятие и освобождение места
 }

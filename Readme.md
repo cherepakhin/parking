@@ -15,3 +15,8 @@ mvn spring-boot:run
 mvn flyway:clean -Dflyway.user=usercar -Dflyway.password=usercar -Dflyway.url=jdbc:postgresql://localhost:5432/parkingcar
 ````
 
+Борьба с git
+````shell
+git remote add origin https://github.com/cherepakhin/parking.git
+git push -u origin master
+````

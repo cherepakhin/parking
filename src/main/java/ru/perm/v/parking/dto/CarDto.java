@@ -6,7 +6,6 @@ import lombok.experimental.FieldDefaults;
 
 /**
  * DTO машины
- *
  */
 @Setter
 @Getter

@@ -26,6 +26,7 @@ public class ParkingController {
 
     /**
      * Получение всех припаркованных машин
+     *
      * @return список машин
      */
     @GetMapping("/")

@@ -23,7 +23,7 @@ git push -u origin master
 ````
 (в нормальном проекте master для разработчиков недоступен)
 
-## Тестирование с помощью утилиты [httpie](https://httpie.io/)
+## Ручное тестирование с помощью утилиты [httpie](https://httpie.io/)
 ````shell
 $ http 192.168.1.20:8090/car/
 

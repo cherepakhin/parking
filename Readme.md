@@ -4,7 +4,7 @@
 ##Постановка
 Несколько парковок. Машины занимают места на конкретной парковке, выезжают. Кол-во мест на парковке ограничено.
 
-## Примечания
+## Работа СУБД
 Инициализация БД:
 ````shell
 create database parkingcar 
@@ -47,7 +47,38 @@ Transfer-Encoding: chunked
     }
 ]
 ````
+## Spring Actuator
+Реализуется добавлением maven зависимости
+````
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
 
+````
+Доступен по [http://127.0.0.1:8090/actuator](http://127.0.0.1:8090/actuator)
+````json
+{
+    "_links": {
+        "health": {
+            "href": "http://127.0.0.1:8090/actuator/health",
+            "templated": false
+        },
+        "health-path": {
+            "href": "http://127.0.0.1:8090/actuator/health/{*path}",
+            "templated": true
+        },
+        "info": {
+            "href": "http://127.0.0.1:8090/actuator/info",
+            "templated": false
+        },
+        "self": {
+            "href": "http://127.0.0.1:8090/actuator",
+            "templated": false
+        }
+    }
+}
+````
 ## НЕ СДЕЛАНО
 1. Интеграционное тестирование с помощью behave
 2. Нагрузочное тестирование с помощью yandex-tank

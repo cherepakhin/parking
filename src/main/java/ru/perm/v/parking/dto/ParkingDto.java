@@ -4,9 +4,6 @@ import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Setter
 @Getter
 @NoArgsConstructor

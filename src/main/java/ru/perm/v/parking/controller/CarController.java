@@ -19,8 +19,8 @@ import java.util.stream.Collectors;
 @RequestMapping("/car")
 public class CarController {
 
-    ObjectMapper mapper = new ObjectMapper();
     private final CarService carService;
+    ObjectMapper mapper = new ObjectMapper();
 
     public CarController(CarService carService) {
         this.carService = carService;
@@ -35,12 +35,12 @@ public class CarController {
     @GetMapping("/{id}")
     public ResponseEntity getCar(@PathVariable Long id) {
         try {
-            CarEntity carEntity=carService.getById(id);
+            CarEntity carEntity = carService.getById(id);
             System.out.println(carEntity);
             CarDto dto = new CarDto(carEntity.getId(), carEntity.getGosNumber(), carEntity.getModel());
-            return new ResponseEntity<>(dto,HttpStatus.OK);
+            return new ResponseEntity<>(dto, HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<>(e.getMessage(),HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
 

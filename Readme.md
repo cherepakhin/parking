@@ -55,3 +55,4 @@ Transfer-Encoding: chunked
 4. Описать генерацию документации java-doc
 5. И пользовательской док-ии на rest в OpenApi
 6. Spring Actuator
+7. Security

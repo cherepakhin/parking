@@ -21,6 +21,31 @@ git remote add origin https://github.com/cherepakhin/parking.git
 git push -u origin master
 ````
 
+## Тестирование с помощью утилиты [httpie](https://httpie.io/)
+````shell
+$ http 192.168.1.20:8090/car/
+
+HTTP/1.1 200 
+Connection: keep-alive
+Content-Type: application/json
+Date: Thu, 29 Dec 2022 08:38:58 GMT
+Keep-Alive: timeout=60
+Transfer-Encoding: chunked
+
+[
+    {
+        "gosNumber": "111",
+        "id": 1,
+        "model": "mark1"
+    },
+    {
+        "gosNumber": "222",
+        "id": 2,
+        "model": "mark2"
+    }
+]
+````
+
 ## НЕ СДЕЛАНО
 1. Интеграционное тестирование с помощью behave
 2. Нагрузочное тестирование с помощью yandex-tank

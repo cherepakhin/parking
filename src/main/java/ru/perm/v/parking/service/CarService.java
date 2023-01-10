@@ -11,4 +11,6 @@ public interface CarService {
     CarEntity getById(Long id);
 
     List<CarEntity> getAll();
+
+    Boolean deleteById(Long id);
 }

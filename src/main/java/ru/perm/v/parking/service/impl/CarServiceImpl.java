@@ -33,4 +33,14 @@ public class CarServiceImpl implements CarService {
     public List<CarEntity> getAll() {
         return carRepository.findAll();
     }
+
+    @Override
+    public Boolean deleteById(Long id) {
+        CarEntity car = getById(id);
+        if(car!=null) {
+            carRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
 }

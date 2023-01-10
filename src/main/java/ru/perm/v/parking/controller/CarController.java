@@ -55,14 +55,15 @@ public class CarController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteCar(@PathVariable Integer id) {
-        CarEntity car = carService.getById(id.longValue());
+    public ResponseEntity<String> deleteCar(@PathVariable Long id) {
+        CarEntity car = carService.getById(id);
         System.out.println(car.getId());
         if(car.getId() == null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("id not exist");
         }
 
         try {
+            carService.deleteById(id);
             return ResponseEntity.status(HttpStatus.OK).build();
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("id not exist");

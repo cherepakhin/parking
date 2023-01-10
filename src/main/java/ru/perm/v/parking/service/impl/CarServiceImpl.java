@@ -37,7 +37,7 @@ public class CarServiceImpl implements CarService {
     @Override
     public Boolean deleteById(Long id) {
         CarEntity car = getById(id);
-        if(car!=null) {
+        if (car != null) {
             carRepository.deleteById(id);
             return true;
         }

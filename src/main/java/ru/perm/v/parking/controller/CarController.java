@@ -54,10 +54,11 @@ public class CarController {
                 carEntity.getGosNumber(), carEntity.getModel())).collect(Collectors.toList());
     }
 
-    @DeleteMapping("/{id")
+    @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteCar(@PathVariable Integer id) {
         CarEntity car = carService.getById(id.longValue());
-        if(car == null) {
+        System.out.println(car.getId());
+        if(car.getId() == null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("id not exist");
         }
 

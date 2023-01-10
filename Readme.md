@@ -91,3 +91,5 @@ Transfer-Encoding: chunked
 5. `~~И пользовательской док-ии на rest в OpenApi~~
 6. Security
 7. jasperreports (???)
+8. error-controller
+

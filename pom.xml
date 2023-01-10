@@ -50,28 +50,11 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>io.springfox</groupId>-->
-<!--			<artifactId>springfox-boot-starter</artifactId>-->
-<!--			<version>3.0.0</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.springdoc</groupId>-->
-<!--			<artifactId>springdoc-openapi-ui</artifactId>-->
-<!--			<version>1.6.4</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.springdoc</groupId>-->
-<!--			<artifactId>springdoc-openapi-ui</artifactId>-->
-<!--			<version>1.6.6</version>-->
-<!--		</dependency>-->
-
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-boot-starter</artifactId>
 			<version>3.0.0</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
@@ -89,7 +72,6 @@
 			<version>3.6.28</version>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>net.bytebuddy</groupId>
 			<artifactId>byte-buddy</artifactId>
@@ -110,14 +92,6 @@
 					<source>11</source>
 					<target>11</target>
 				</configuration>
-                <!--                <configuration>-->
-<!--                    <source>11</source>-->
-<!--                    <target>11</target>-->
-<!--                </configuration>-->
-                <!--				<configuration>-->
-<!--					<source>9</source>-->
-<!--					<target>9</target>-->
-<!--				</configuration>-->
 			</plugin>
 		</plugins>
 	</build>

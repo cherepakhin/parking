@@ -88,6 +88,6 @@ Transfer-Encoding: chunked
 2. Нагрузочное тестирование с помощью yandex-tank
 3. Докеризация
 4. Описать генерацию документации java-doc
-5. И пользовательской док-ии на rest в OpenApi
+5. `~~И пользовательской док-ии на rest в OpenApi~~
 6. Security
 7. jasperreports (???)

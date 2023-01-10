@@ -1,6 +1,8 @@
 package ru.perm.v.parking.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +19,7 @@ import java.util.stream.Collectors;
 //TODO: не реализовано удаление машины
 @RestController
 @RequestMapping("/car")
+@Api(tags = "car-api")
 public class CarController {
 
     private final CarService carService;
@@ -33,6 +36,7 @@ public class CarController {
     }
 
     @GetMapping("/{id}")
+    @ApiOperation("Получение машины по id")
     public ResponseEntity getCar(@PathVariable Long id) {
         try {
             CarEntity carEntity = carService.getById(id);
@@ -50,4 +54,17 @@ public class CarController {
                 carEntity.getGosNumber(), carEntity.getModel())).collect(Collectors.toList());
     }
 
+    @DeleteMapping("/{id")
+    public ResponseEntity<String> deleteCar(@PathVariable Integer id) {
+        CarEntity car = carService.getById(id.longValue());
+        if(car == null) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("id not exist");
+        }
+
+        try {
+            return ResponseEntity.status(HttpStatus.OK).build();
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("id not exist");
+        }
+    }
 }

@@ -25,7 +25,7 @@ git push -u origin master
 
 ## Ручное тестирование с помощью утилиты [httpie](https://httpie.io/)
 ````shell
-$ http 192.168.1.20:8090/car/
+$ http 192.168.1.20:8080/car/
 
 HTTP/1.1 200 
 Connection: keep-alive
@@ -56,7 +56,7 @@ Transfer-Encoding: chunked
 </dependency>
 
 ````
-Доступен по [http://127.0.0.1:8090/actuator](http://127.0.0.1:8090/actuator)
+Доступен по [http://127.0.0.1:8080/actuator](http://127.0.0.1:8080/actuator)
 ````json
 {
     "_links": {
@@ -79,11 +79,15 @@ Transfer-Encoding: chunked
     }
 }
 ````
+## Api-docs
+Доступен [http://127.0.0.1:8080/v3/api-docs](http://127.0.0.1:8080/v3/api-docs)
+## Swagger-ui
+[http://127.0.0.1:8080/swagger-ui/index.html](http://127.0.0.1:8080/swagger-ui/index.html)
 ## НЕ СДЕЛАНО
 1. Интеграционное тестирование с помощью behave
 2. Нагрузочное тестирование с помощью yandex-tank
 3. Докеризация
 4. Описать генерацию документации java-doc
 5. И пользовательской док-ии на rest в OpenApi
-6. Spring Actuator
-7. Security
+6. Security
+7. jasperreports (???)

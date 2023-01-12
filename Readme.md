@@ -84,12 +84,14 @@ Transfer-Encoding: chunked
 ## Swagger-ui
 [http://127.0.0.1:8080/swagger-ui/index.html](http://127.0.0.1:8080/swagger-ui/index.html)
 ## НЕ СДЕЛАНО
-1. Интеграционное тестирование с помощью behave
-2. Нагрузочное тестирование с помощью yandex-tank
-3. Докеризация
-4. Описать генерацию документации java-doc
+1.  Интеграционное тестирование с помощью behave
+2.  Нагрузочное тестирование с помощью yandex-tank
+3.  Докеризация
+4.  Описать генерацию документации java-doc
 5. `~~И пользовательской док-ии на rest в OpenApi~~
-6. Security
-7. jasperreports (???)
-8. error-controller
+6.  Security
+7.  jasperreports (???)
+8.  error-controller
+9.  Поктрытие тестами
+10. Настройка логов
 

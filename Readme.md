@@ -25,7 +25,8 @@ git push -u origin master
 
 ## Ручное тестирование с помощью утилиты [httpie](https://httpie.io/)
 ````shell
-$ http 192.168.1.20:8080/car/
+$ http :8080/car/
+(или http 127.0.0.1:8080/car/)
 
 HTTP/1.1 200 
 Connection: keep-alive

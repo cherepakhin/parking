@@ -19,8 +19,7 @@ logging:
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql.BasicBinder: debug
     root: info
-  file:
-    path: log/app.log
+  file: log/app.log
   logback:
     rollingpolicy:
       max-file-size: 1MB

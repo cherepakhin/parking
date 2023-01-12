@@ -16,7 +16,6 @@ import java.util.stream.Collectors;
 /**
  * REST контроллер для добавления, удаления, изменения, получения машин
  */
-//TODO: не реализовано удаление машины
 @RestController
 @RequestMapping("/car")
 @Api(tags = "car-api")

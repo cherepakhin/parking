@@ -93,5 +93,5 @@ Transfer-Encoding: chunked
 7.  jasperreports (???)
 8.  error-controller
 9.  Поктрытие тестами
-10. Настройка логов
+10. ~~Настройка логов~~
 

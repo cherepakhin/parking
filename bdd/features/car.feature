@@ -1,6 +1,6 @@
 Feature: Test rest /car
 
-  Scenario: Run a simple rest test :8080/car/1
+  Scenario: Get :8080/car/1
     Given a request url http://127.0.0.1:8080/car/1
     When the request sends GET
     Then the response status is OK

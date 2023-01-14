@@ -29,7 +29,7 @@ Feature: Showing off behave # features/example.feature:2
 Took 0m0.000s
 ````
 
-##Отчеты Allure
+## Отчеты Allure
 
 Установка формата Allure
 ```shell

@@ -84,8 +84,10 @@ Transfer-Encoding: chunked
 Доступен [http://127.0.0.1:8080/v3/api-docs](http://127.0.0.1:8080/v3/api-docs)
 ## Swagger-ui
 [http://127.0.0.1:8080/swagger-ui/index.html](http://127.0.0.1:8080/swagger-ui/index.html)
+## Behave тестирование
+Подробно описано тут [bdd/Readme.md](bdd/Readme.md)
 ## НЕ СДЕЛАНО
-1.  Интеграционное тестирование с помощью behave
+1.  ~~Интеграционное тестирование с помощью behave~~
 2.  Нагрузочное тестирование с помощью yandex-tank
 3.  Докеризация
 4.  Описать генерацию документации java-doc

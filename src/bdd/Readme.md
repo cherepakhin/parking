@@ -1,6 +1,14 @@
-Behave тестирование
+##Behave тестирование (нужен python!!!)
 
-Установить https://github.com/behave/behave
+Установить<br/>
+https://github.com/behave/behave <br/>
+https://github.com/behave-restful/behave-restful <br/>
+```shell
+pip install behave
+pip install behave-restful
+```
+
+behave-restful пакет, ктр помогает делать REST запросы и парсить, анализировать ответы
 
 Для проверки в parking/src/bdd выполнить
 ````shell
@@ -19,4 +27,18 @@ Feature: Showing off behave # features/example.feature:2
 1 scenario passed, 0 failed, 0 skipped
 3 steps passed, 0 failed, 0 skipped, 0 undefined
 Took 0m0.000s
+````
+
+##Отчеты Allure
+Установка формата Allure
+```shell
+pip install allure-behave
+```
+Для выполнения тестов и выдачи отчетов в красивом формате в папке ./bdd выполнить:
+````shell
+behave -f allure_behave.formatter:AllureFormatter -o reports
+````
+Для просмотра отчетов в папке ./bdd выполнить
+````shell
+allure  serve reports/
 ````

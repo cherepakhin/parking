@@ -10,7 +10,7 @@ pip install behave-restful
 
 behave-restful пакет, ктр помогает делать REST запросы и парсить, анализировать ответы
 
-Для проверки в parking/src/bdd выполнить
+Для проверки в ./bdd выполнить
 ````shell
 behave
 ````

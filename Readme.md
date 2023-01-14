@@ -5,11 +5,11 @@
 Несколько парковок. Машины занимают места на конкретной парковке, выезжают. Кол-во мест на парковке ограничено.
 
 ## Работа СУБД
+Использован пакет наката изменений [https://flywaydb.org/](https://flywaydb.org/) 
 Инициализация БД:
 ````shell
 create database parkingcar 
 mvn flyway:migrate -Dflyway.url=jdbc:postgresql://localhost:5432/parkingcar -Dflyway.user=usercar -Dflyway.password=usercar
-mvn spring-boot:run
 ````
 Очистка БД:
 ````shell
@@ -22,32 +22,6 @@ git remote add origin https://github.com/cherepakhin/parking.git
 git push -u origin master
 ````
 (в нормальном проекте master для разработчиков недоступен)
-
-## Ручное тестирование с помощью утилиты [httpie](https://httpie.io/)
-````shell
-$ http :8080/car/
-(или http 127.0.0.1:8080/car/)
-
-HTTP/1.1 200 
-Connection: keep-alive
-Content-Type: application/json
-Date: Thu, 29 Dec 2022 08:38:58 GMT
-Keep-Alive: timeout=60
-Transfer-Encoding: chunked
-
-[
-    {
-        "gosNumber": "111",
-        "id": 1,
-        "model": "mark1"
-    },
-    {
-        "gosNumber": "222",
-        "id": 2,
-        "model": "mark2"
-    }
-]
-````
 ## Spring Actuator
 Реализуется добавлением maven зависимости
 ````
@@ -84,6 +58,32 @@ Transfer-Encoding: chunked
 Доступен [http://127.0.0.1:8080/v3/api-docs](http://127.0.0.1:8080/v3/api-docs)
 ## Swagger-ui
 [http://127.0.0.1:8080/swagger-ui/index.html](http://127.0.0.1:8080/swagger-ui/index.html)
+## Ручное тестирование с помощью утилиты [httpie](https://httpie.io/)
+````shell
+$ http :8080/car/
+(или http 127.0.0.1:8080/car/)
+
+HTTP/1.1 200 
+Connection: keep-alive
+Content-Type: application/json
+Date: Thu, 29 Dec 2022 08:38:58 GMT
+Keep-Alive: timeout=60
+Transfer-Encoding: chunked
+
+[
+    {
+        "gosNumber": "111",
+        "id": 1,
+        "model": "mark1"
+    },
+    {
+        "gosNumber": "222",
+        "id": 2,
+        "model": "mark2"
+    }
+]
+````
+
 ## Behave тестирование (нужен python!!!)
 Установить<br/>
 https://github.com/behave/behave <br/>
@@ -93,7 +93,7 @@ pip install behave
 pip install behave-restful
 ```
 Пакеты behave, behave-restful помогают делать REST запросы, парсить и анализировать ответы. 
-Для проверки работоспособности в папке ./bdd выполнить
+Для проверки работоспособности в папке <b>./bdd</b> выполнить
 ````shell
 behave
 ````
@@ -117,7 +117,7 @@ Allure нужен для красивого вывода результатов 
 ```shell
 pip install allure-behave
 ```
-Для выполнения тестов и выдачи отчетов в красивом формате в папке ./bdd выполнить:
+Для выполнения тестов и выдачи отчетов в формате Allure в папке ./bdd выполнить:
 ````shell
 behave -f allure_behave.formatter:AllureFormatter -o reports
 ````

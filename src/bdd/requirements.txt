@@ -1,0 +1,11 @@
+allure-behave==2.8.19
+allure-python-commons==2.8.19
+behave==1.2.6
+behave-http==0.1.1
+behave-restful==0.4.1
+jpath==1.6
+jsonpath==0.82
+jsonpath-ng==1.5.3
+jsonref==0.2
+jsonschema==3.2.0
+requests==2.25.1

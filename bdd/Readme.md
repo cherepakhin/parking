@@ -30,6 +30,7 @@ Took 0m0.000s
 ````
 
 ##Отчеты Allure
+
 Установка формата Allure
 ```shell
 pip install allure-behave

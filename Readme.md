@@ -22,6 +22,22 @@ git remote add origin https://github.com/cherepakhin/parking.git
 git push -u origin master
 ````
 (в нормальном проекте master для разработчиков недоступен)
+
+## Логирование
+Настройка логов в application.yaml
+````yaml
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: debug
+    root: info
+  file: log/app.log
+  logback:
+    rollingpolicy:
+      max-file-size: 1MB
+````
+Логи в файле log/app.log с ротацией при размере 1МБ.
+
 ## Spring Actuator
 Реализуется добавлением maven зависимости
 ````

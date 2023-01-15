@@ -70,6 +70,13 @@ logging:
     }
 }
 ````
+## Java doc
+Генерация делается при сборке или отдельной командой  
+````shell
+ mvn javadoc:javadoc
+````
+Сгенерированная документация будет в папке [target/site/apidocs/index.html](target/site/apidocs/index.html)
+
 ## Api-docs
 Доступен [http://127.0.0.1:8080/v3/api-docs](http://127.0.0.1:8080/v3/api-docs)
 ## Swagger-ui
@@ -166,7 +173,7 @@ public class Error503 extends RuntimeException {
 2.  Нагрузочное тестирование с помощью yandex-tank
 3.  Докеризация
 4.  Описать генерацию документации java-doc
-5. `~~И пользовательской док-ии на rest в OpenApi~~
+5.  ~~И пользовательской док-ии на rest в OpenApi~~
 6.  Security
 7.  jasperreports (???)
 8.  ~~error-message~~

@@ -134,7 +134,7 @@ allure serve reports/
 5. `~~И пользовательской док-ии на rest в OpenApi~~
 6.  Security
 7.  jasperreports (???)
-8.  error-controller
+8.  ~~error-message~~
 9.  Покрытие тестами
 10. ~~Настройка логов~~
 

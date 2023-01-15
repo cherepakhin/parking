@@ -126,6 +126,12 @@ behave -f allure_behave.formatter:AllureFormatter -o reports
 ````shell
 allure serve reports/
 ````
+## Покрытие тестами
+Использован [jacoco](https://www.eclemma.org/jacoco/).
+Отчет будет сгенерирован автоматически при сборке (или *mvn package*).
+Сгенерированный отчет в папке [target/site/jacoco/index.html](target/site/jacoco/index.html)
+![jacoco_test](image/jacoco.png "jacoco report")
+
 ## Ошибки REST
 Настройка выдачи REST ответов при возникновении ошибок реализовано в пакете [ru.perm.v.parking.controller.exception](ru.perm.v.parking.controller.exception). Пример типовой реализации:
 ```java

@@ -154,6 +154,6 @@ public class Error503 extends RuntimeException {
 6.  Security
 7.  jasperreports (???)
 8.  ~~error-message~~
-9.  Покрытие тестами
+9.  ~~Покрытие тестами~~
 10. ~~Настройка логов~~
 

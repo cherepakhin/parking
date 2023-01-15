@@ -126,6 +126,19 @@ behave -f allure_behave.formatter:AllureFormatter -o reports
 ````shell
 allure serve reports/
 ````
+## Ошибки REST
+Настройка выдачи REST ответов при возникновении ошибок реализовано в пакете [ru.perm.v.parking.controller.exception](ru.perm.v.parking.controller.exception). Пример типовой реализации:
+```java
+@Slf4j
+@ResponseStatus(HttpStatus.SERVICE_UNAVAILABLE)
+public class Error503 extends RuntimeException {
+    public Error503(String message) {
+        super(message);
+        log.error(message);
+    }
+}
+```
+
 ## НЕ СДЕЛАНО
 1.  ~~Интеграционное тестирование с помощью behave~~
 2.  Нагрузочное тестирование с помощью yandex-tank
